@@ -1,15 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png">
+
+  <title>trillo &mdash; Your all-in-one booking app</title>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header class="header">
+      <img src="img/logo.png" alt="Trillo logo" class="logo">
+
+      <form action="#" class="search">
+        <input type="text" class="search__input" placeholder="Search hotels">
+        <button class="search__button" title="Search">
+          <svg class="search__icon"><use xlink:href="img/sprite.svg#icon-magnifying-glass"></use></svg>
+        </button>
+      </form>
+
+      <nav class="user-nav">
+
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon"><use xlink:href="img/sprite.svg#icon-bookmark"></use></svg>
+          <span class="user-nav__notification">7</span>
+        </div>
+
+        <div class="user-nav__icon-box">
+          <svg class="user-nav__icon"><use xlink:href="img/sprite.svg#icon-chat"></use></svg>
+          <span class="user-nav__notification">13</span>
+        </div>
+
+        <div class="user-nav__user">
+          <img src="img/user.jpg" alt="User photo" class="user-nav__user-photo">
+          <span class="user-nav__user-name">Jonas</span>
+        </div>
+
+      </nav>
+
+    </header>
+
+    <div class="content">
+      <aside class="sidebar">
+        <nav class="nav">
+          <ul class="nav__items">
+            <li class="nav__item nav__item nav__item--active">
+              <a href="#nav-item-home" class="nav__link">
+                <svg class="nav__icon"><use xlink:href="img/sprite.svg#icon-home"></use></svg>
+                <span>Hotel</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#nav-item-flight" class="nav__link">
+                <svg class="nav__icon"><use xlink:href="img/sprite.svg#icon-aircraft-take-off"></use></svg>
+                <span>Flight</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#nav-item-car-rental" class="nav__link">
+                <svg class="nav__icon"><use xlink:href="img/sprite.svg#icon-key"></use></svg>
+                <span>Car Rental</span>
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#nav-item-tours" class="nav__link">
+                <svg class="nav__icon"><use xlink:href="img/sprite.svg#icon-map"></use></svg>
+                <span>Tours</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <footer class="nav__footer">
+          <p>&copy; 2018 by Trillo. All rights reserved.</p>
+        </footer>
+      </aside>
+
+      <main class="hotel-view">
         
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png">
-        
-        <title>trillo &mdash; Your all-in-one booking app</title>
-    </head>
-    <body>
-    </body>
+        <section class="gallery">
+          <figure class="gallery__item">
+            <img src="img/hotel-1.jpg" alt="Hotel view 1" class="gallery__image">
+          </figure>
+          <figure class="gallery__item">
+            <img src="img/hotel-2.jpg" alt="Hotel view 2" class="gallery__image">
+          </figure>
+          <figure class="gallery__item">
+            <img src="img/hotel-3.jpg" alt="Hotel view 3" class="gallery__image">
+          </figure>
+        </section>
+
+        <section class="overview">
+          <h1 class="overview__heading">
+            Hotel Las Palmas
+          </h1>
+
+          <div class="overview__stars">
+            <svg class="overview__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg>
+            <svg class="overview__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg>
+            <svg class="overview__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg>
+            <svg class="overview__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg>
+            <svg class="overview__star"><use xlink:href="img/sprite.svg#icon-star"></use></svg>
+          </div>
+
+          <div class="overview__location">
+            <svg class="overview__location-icon"><use xlink:href="img/sprite.svg#icon-location-pin"></use></svg>
+            <a href="#" class="inline-button">Albufeira, Portugal</a>
+          </div>
+
+          <div class="overview__raiting">
+            <div class="overview__score">8.6</div>
+            <div class="overview__votes">426 votes</div>
+          </div>
+
+        </section>
+
+        <div class="details">
+          <section class="description">
+            <p class="paragrapth">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus incidunt quaerat vero eum, laudantium, atque veritatis molestias animi aspernatur omnis, pariatur similique officiis. Odit tenetur ea velit maiores. Tenetur, doloremque.
+            </p>
+            <p class="paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut est laborum itaque quaerat illum sint in a voluptatibus hic libero.
+            </p>
+            <ul class="list">
+              <li class="list__item">Lorem, ipsum.</li>
+              <li class="list__item">Lorem ipsum dolor sit.</li>
+              <li class="list__item">Lorem..</li>
+              <li class="list__item">Lorem, ipsum.</li>
+              <li class="list__item">Lorem ipsum dolor sit.</li>
+              <li class="list__item">Lorem ipsum dolor sit amet.</li>
+              <li class="list__item">Lorem, ipsum.</li>
+              <li class="list__item">Lorem ipsum dolor sit.</li>
+            </ul>
+            <div class="recommend">
+              <p class="recommend__count">
+                Lorem ipsum dolor sit amet consectetur.
+              </p>
+              <div class="recommend__friends">
+                <img src="img/user-3.jpg" alt="User image" class="recommend__photo">
+                <img src="img/user-4.jpg" alt="User image" class="recommend__photo">
+                <img src="img/user-5.jpg" alt="User image" class="recommend__photo">
+                <img src="img/user-6.jpg" alt="User image" class="recommend__photo">
+              </div>
+            </div>
+          </section>
+
+          <aside class="user-reviews">
+            <article class="user-comment">
+              <p class="user-comment__message">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate alias ut accusantium!
+              </p>
+              <img src="img/user-1.jpg" alt="User photo" class="user-comment__photo">
+              <div class="user-comment__info">
+                <h2 class="user-comment__name">Nick Smith</h2>
+                <span class="user-comment__date">Feb 23rd, 2017</span>
+              </div>
+              <div class="user-comment__rating">7.8</div>
+            </article>
+            <article class="user-comment">
+              <p class="user-comment__message">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eveniet distinctio culpa?
+              </p>
+              <img src="img/user-2.jpg" alt="User photo" class="user-comment__photo">
+              <div class="user-comment__info">
+                <h2 class="user-comment__name">Mary Thomas</h2>
+                <span class="user-comment__date">Sep 14th, 2017</span>
+              </div>
+              <div class="user-comment__rating">9.3</div>
+            </article>
+            <a href="#" class="user-reviews__link inline-button">Show all &rarr;</a>
+          </aside>
+        </div>
+
+        <div class="cta">
+          <h2 class="cta__message">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit?
+          </h2>
+          <button class="btn">
+            <span class="btn__visible">Book now!</span>
+            <span class="btn__invisible">Only 4 rooms available!</span>
+          </button>
+        </div>
+
+      </main>
+
+    </div>
+  </div>
+
+</body>
+
 </html>
