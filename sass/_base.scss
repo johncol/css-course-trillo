@@ -46,6 +46,7 @@ html {
 }
 
 body {
+  min-width: 325px;
   min-height: 100vh;
   background-image: linear-gradient(to bottom right, var(--primary-light), var(--primary-dark));
   font-family: 'Open Sans', sans-serif;
