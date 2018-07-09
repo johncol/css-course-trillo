@@ -1,3 +1,10 @@
+$bp-largest:      75.00em; // 1200px
+$bp-large:        68.75em; // 1100px
+$bp-medium:       56.25em; // 900px
+$bp-small:        43.75em; // 700px
+$bp-smallest:     34.37em; // 550px
+$bp-tiny-devices: 25.00em; // 400px
+
 :root {
   --primary: #eb2f64;
   --primary-light: #ff3366;
@@ -18,11 +25,16 @@
   --separator-border: 1px solid var(--color-grey-light-2);
 
   --main-boxes-spacing: 4rem;
+  --main-boxes-spacing-medium: calc(var(--main-boxes-spacing) * 0.6);
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // 10px
   box-sizing: border-box;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 56.25%; // 9px
+  }
 }
 
 *,
@@ -34,7 +46,6 @@ html {
 }
 
 body {
-  padding-top: 1px;
   min-height: 100vh;
   background-image: linear-gradient(to bottom right, var(--primary-light), var(--primary-dark));
   font-family: 'Open Sans', sans-serif;

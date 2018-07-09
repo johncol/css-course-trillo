@@ -4,6 +4,10 @@
 .logo {
   height: 3.25rem;
   margin: 2.3rem;
+
+  @media only screen and (max-width: $bp-smallest) {
+    margin: 1rem 2.3rem 0;
+  }
 }
 
 /**
@@ -15,6 +19,12 @@
   justify-content: center;
   flex: 0 0 40%;
 
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    align-self: flex-end;
+  }
+
   &__input {
     width: 90%;
     border: none;
@@ -25,6 +35,11 @@
     color: inherit;
     padding: 0.7rem 2rem;
     transition: width 0.5s ease;
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 102%;
+      border-radius: 0;
+    }
 
     &:focus {
       outline: none;
@@ -40,6 +55,10 @@
     border: none;
     background: transparent;
     margin-left: -2.8rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      margin-left: -2rem;
+    }
 
     &:focus{
       outline: none;
@@ -121,16 +140,35 @@
 .nav {
   font-size: 1.4rem;
 
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 1.2rem;
+  }
+
   &__items {
     list-style: none;
     padding: 3.5rem 0;
+    
+    @media only screen and (max-width: $bp-large) {
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+    }
   }
 
   &__item {
-    position: relative;
+    position: relative; 
+  
+    @media only screen and (max-width: $bp-large) {
+      flex: 1;
+      text-align: center;
+    }
     
     &:not(:last-child) {
       margin-bottom: 0.5rem;
+
+      @media only screen and (max-width: $bp-large) {
+        margin-bottom: 0;
+      }
     }
     
     &::before {
@@ -174,6 +212,11 @@
       position: relative;
       z-index: 20;
       cursor: pointer;
+
+      @media only screen and (max-width: $bp-large) {
+        padding: 1.5rem 0.5rem;
+        justify-content: center;
+      }
     }
   }
 
@@ -183,6 +226,10 @@
     flex: 0 0 4rem;
     margin-right: 1rem;
     fill: currentColor;
+    
+    @media only screen and (max-width: $bp-large) {
+      display: none;
+    }
   }
 
   &__footer {
@@ -190,6 +237,10 @@
     text-align: center;
     font-size: 1.3rem;
     color: var(--color-grey-light-4);
+
+    @media only screen and (max-width: $bp-large) {
+      display: none;
+    }
   }
 }
 
@@ -213,12 +264,20 @@
   display: flex;
   align-items: center;
   font-size: 1.3rem;
+  
+  @media only screen and (max-width: $bp-smallest) {
+    font-size: 1.1rem;
+  }
 
   &__heading {
     padding: 1.5rem 3rem;
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 1px;
+  
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 1rem 1.5rem;
+    }
   }
 
   &__stars {
@@ -230,6 +289,11 @@
     width: 1.75rem;
     height: 1.75rem;
     fill: var(--primary);
+  
+    @media only screen and (max-width: $bp-smallest) {
+      width: 0.9rem;
+      height: 0.9rem;
+    }
   }
 
   &__location {
@@ -237,7 +301,10 @@
     display: flex;
     align-items: center;
     margin-right: 3rem;
-
+  
+    @media only screen and (max-width: $bp-smallest) {
+      margin-right: 1rem;
+    }
   }
 
   &__location-icon {
@@ -245,6 +312,12 @@
     height: 1.75rem;
     fill: currentColor;
     margin-right: 0.2rem;
+  }
+
+  &__location-link {
+    @media only screen and (max-width: $bp-tiny-devices) {
+      display: none;
+    }
   }
 
   &__raiting {
@@ -256,13 +329,22 @@
     background-color: var(--primary);
     color: var(--color-grey-light-1);
     padding: 0 2.5rem;
+  
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__score {
     font-size: 2.5rem;
+  
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 2rem;
+    }
   }
   
   &__votes {
+    text-align: center;
     font-size: 0.9rem;
     margin-top: -0.3rem;
   }
@@ -308,13 +390,21 @@
   padding: 3rem 0;
   border-top: var(--separator-border);
   border-bottom: var(--separator-border);
-
   display: flex;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: $bp-small) {
+    margin: 2rem 0;
+    padding: 2rem 0;
+  }
 
   &__item {
     flex: 0 0 50%;
     margin-bottom: 0.7rem;
+
+    @media only screen and (max-width: $bp-tiny-devices) {
+      flex: 0 0 100%;
+    }
     
     &::before {
       content: '';
@@ -353,6 +443,10 @@
   &__count {
     margin-right: auto;
   }
+  
+  &__friends {
+    display: flex;
+  }
 
   &__photo {
     width: 4rem;
@@ -380,10 +474,31 @@
   align-items: center;
   font-size: 1.5rem;
   position: relative;
+  overflow: hidden;
+  
+  @media only screen and (max-width: $bp-medium) {
+    margin-bottom: var(--main-boxes-spacing-medium);
+  }
+  
+  @media only screen and (max-width: $bp-small) {
+    flex: 0 0 calc((50% - var(--main-boxes-spacing-medium) / 2));
+
+    &:not(:last-of-type) {
+      margin-right: var(--main-boxes-spacing-medium);
+    }
+  }
+  
+  @media only screen and (max-width: $bp-smallest) {
+    flex: 0 0 100%;
+
+    &:not(:last-of-type) {
+      margin-right: 0;
+    }
+  }
 
   &__message {
     margin-bottom: 2rem;
-    flex-basis: 0 0 100%;
+    flex: 0 0 100%;
   }
 
   &__photo {
@@ -425,7 +540,6 @@
     opacity: 0.4;
     line-height: 20rem;
   }
-
 }
 
 /**
@@ -435,13 +549,19 @@
   background-color: #fff;
   padding: 4rem 0;
   text-align: center;
+  font-size: 1.7rem;
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 1.4rem;
+    padding: 3rem 2rem;
+  }
 
   &__message {
     text-align: center;
     font-weight: 300;
-    font-size: 1.7rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
+    font-size: inherit;
   }
 }
 
@@ -456,6 +576,7 @@
   text-transform: uppercase;
   position: relative;
   cursor: pointer;
+  font-size: 1.3rem;
 
   & > * {
     display: inline-block;
@@ -463,14 +584,26 @@
     height: 100%;
     color: #fff;
     transition: all 0.2s ease-out;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
   }
   
   &__visible {
-    padding: 2rem 7rem;
+    padding-right: 7rem;
+    padding-left: 7rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding-right: 5rem;
+      padding-left: 5rem;
+    }
   }
   
   &__invisible {
-    padding: 2rem 0;
     position: absolute;
     left: 0;
     top: -100%;
