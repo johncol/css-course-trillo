@@ -122,6 +122,14 @@
     right: 1.2rem;
   }
 
+  &__user {
+    position: relative;
+
+    &:hover .options-menu {
+      transform: scaleY(1);
+    }
+  }
+
   &__user-photo {
     width: 3.75rem;
     height: 3.75rem;
@@ -626,6 +634,83 @@
     animation: 1s beat infinite;
   }
 }
+
+/**
+ * ----------------------------------------------- options-menu
+ */
+.options-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 30;
+  min-width: 15rem;
+  background: #fff;
+  font-size: 1.3rem;
+  transform-origin: top;
+  transform: scaleY(0);
+
+  &__options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: var(--separator-border);
+  }
+
+  &__option {
+    margin: 0;
+    padding: 0 3rem 0;
+    line-height: 4rem;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:not(:last-of-type) {
+      border-bottom: var(--separator-border);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 0.3rem;
+      background-color: var(--color-grey-light-3);
+      transform: scaleY(0);
+      z-index: 25;
+      transition:
+        transform 0.3s ease,
+        width 0.4s 0.3s cubic-bezier(1, 0, 0, 1),
+        background-color 0.2s ease;
+    }
+
+    &:hover {
+      color: var(--primary);
+    }
+    
+    &:hover::before,
+    &--active::before {
+      transform: scaleY(1);
+      width: 100%;
+    }
+
+    &:active::before {
+      background-color: var(--primary-light);
+    }
+  }
+
+  &__link {
+    &,
+    &:link,
+    &:visited {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      z-index: 30;
+    }
+  }
+ }
 
 /**
  * ----------------------------------------------- keyframes
